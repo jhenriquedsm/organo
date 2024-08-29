@@ -4,17 +4,14 @@ const TextField = (props) => {
 
     const placeholderModificada = `${props.placeholder}...`
 
-    let value = ''
-
     const digiting = (event) => {
-        value = event.target.value
-        console.log(value)
+        props.alteration(event.target.value)
     }
 
     return (
          <div className="text-field">
             <label>{props.label}</label>
-            <input value={value} onChange={digiting} required={props.mandatory} placeholder={placeholderModificada}/>
+            <input value={props.value} onChange={digiting} required={props.mandatory} placeholder={placeholderModificada}/>
          </div>
     )
 }
