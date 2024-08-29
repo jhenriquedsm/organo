@@ -4,7 +4,7 @@ import SuspensedList from '../SuspensedList'
 import TextField from '../TextField'
 import './Form.css'
 
-const Form = () => {
+const Form = (props) => {
 
     const times = [
         'Governança de TI',
@@ -19,7 +19,12 @@ const Form = () => {
 
     const saving = (event) => {
         event.preventDefault()
-        console.log('Form submetido => ', nome, cargo, imagem, time)
+        props.registeredCollaborator({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return (
