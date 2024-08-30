@@ -49,7 +49,7 @@ const Form = (props) => {
                     mandatory={true} 
                     label='Time' 
                     itens={props.teams} 
-                    value={props.team}
+                    value={time}
                     alteration={value => setTime(value)}
                 />
                 <Button>
