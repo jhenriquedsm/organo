@@ -6,12 +6,6 @@ import './Form.css'
 
 const Form = (props) => {
 
-    const times = [
-        'Governança de TI',
-        'Inovação e Gestão',
-        'Parcerias'
-    ]
-
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -54,8 +48,8 @@ const Form = (props) => {
                 <SuspensedList 
                     mandatory={true} 
                     label='Time' 
-                    itens={times} 
-                    value={time}
+                    itens={props.teams} 
+                    value={props.team}
                     alteration={value => setTime(value)}
                 />
                 <Button>
